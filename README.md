@@ -7,3 +7,14 @@
 
 ## Description
 Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita. The tool used ADB and emmcdl tools. 
+
+## Instruction for use:
+1. Download 2 archives:
+* PFT
+* ROOT
+2. Unpack archives
+3. Copy the file "bootroot.bin" (from the second archive) to the folder "files"
+4. Execute the command in the terminal   
+```bash
+   sudo apt install g ++
+   ```
