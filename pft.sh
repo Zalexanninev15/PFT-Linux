@@ -11,10 +11,10 @@ error() {
 	exit $rc
 }
 
-for x in adb fastboot; do
+for x in emmcdl adb fastboot; do
 	type -P "$x" || error $? "No '$x' command."
 done >/dev/null
-for x in tools/emmcdl/emmcdl partitions.txt tools/emmc.mbn; do
+for x in  partitions.txt tools/emmc.mbn; do
 	[ -f "$x" ] || error 1 "No file '$x'."
 done
 for x in files/*.bin; do
@@ -141,8 +141,7 @@ check4edl() {
 }
 
 dfu2edl() {
-    cd tools/emmcdl
-	if ./emmcdl -p "$(get_port DFU Port)" -raw 0xFE; then
+	if emmcdl -p "$(get_port DFU Port)" -raw 0xFE; then
 		echo 'Done.'
 		check4edl 2
 	else
@@ -198,8 +197,7 @@ EOT
 backup_partition() {
 	local edlcom=$(get_port EDL Port) partn=$(get_partition)
 	mkdir -p backup
-	cd tools/emmcdl
-	if ./emmcdl -p "$edlcom" -f tools/emmc.mbn -d "$partn" -o "backup/${partn}.bin"; then
+	if emmcdl -p "$edlcom" -f tools/emmc.mbn -d "$partn" -o "backup/${partn}.bin"; then
 		echo 'Done.'
 	else
 		cat <<EOT
@@ -230,9 +228,8 @@ declare -a partitions2backup=(
 backup_all_partitions() {
 	local partn edlcom=$(get_port EDL Port)
 	mkdir -p backup
-	cd tools/emmcdl
 	for partn in "${partitions2backup[@]}"; do
-		if ./emmcdl \
+		if emmcdl \
 			-p "$edlcom" \
 			-f tools/emmc.mbn \
 			-d "$partn" \
@@ -262,8 +259,7 @@ flash_partition() {
 		echo 'What??'
 	done
 	echo "Flashing '$flash' to partition '$partn' via '$edlcom'..." >/dev/tty
-	cd tools/emmcdl
-	if ./emmcdl -p "$edlcom" -f tools/emmc.mbn -b "$partn" "$flash"; then
+	if emmcdl -p "$edlcom" -f tools/emmc.mbn -b "$partn" "$flash"; then
 		echo 'Done.'
 	else
 		cat <<EOT
