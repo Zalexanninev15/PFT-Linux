@@ -72,7 +72,7 @@ Do not forget to get rid of the ModemManager first!
 EOT
 fi >/dev/tty
 
-read -r -p '-- press Enter to continue --'
+read -r -p '-- Press Enter to continue --'
 
 ls_usb_interfaces() {
 	local -i n=0
@@ -104,7 +104,7 @@ get_port() {
 	[ -w "$port" ] && w=writable || w=non-writable
 	ls -l "$port" > /dev/tty
 	echo "$prompt is '$port', $w, $r." > /dev/tty
-	read -r -p 'Press Enter to continue...' w < /dev/tty
+	read -r -p '-- Press Enter to continue --' w < /dev/tty
 	echo "$port"
 }
 
