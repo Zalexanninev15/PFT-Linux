@@ -3,4 +3,4 @@
 cd tools/emmcdl
 make
 ./emmcdl
-read -r -p '-- press Enter to exit --'
+read -r -p '-- Press Enter to exit --'
