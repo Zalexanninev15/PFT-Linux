@@ -9,14 +9,9 @@
 Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita. The tool used ADB and emmcdl tools. 
 
 ## Instruction for use
-1. Download PFT files
-1. Copy the file "bootroot.bin" (from "root" archive) to the folder "files"
-4. Execute the command in the terminal   
-```bash
-   sudo apt install g ++
-```
-5. Run the script "make_emmcdl.sh" (always, before using PFT)
-6. Run the script "pft.sh" (PFT himself)
+1. Download and run this script for the correct use and configuration of PFT. After reboot please open the folder "Ported_PFT"
+2. Run the script "emmcdl.sh" (always, before using PFT) or in "emmcdl" folder execute the "make" command
+
+3. Run the script "pft.sh" (PFT himself)
 
 #### **I will continue to write how I will figure it out myself :)**
-
