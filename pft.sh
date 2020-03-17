@@ -72,7 +72,9 @@ Do not forget to get rid of the ModemManager first!
 EOT
 fi >/dev/tty
 
+echo
 read -r -p '-- Press Enter to continue --'
+echo
 
 ls_usb_interfaces() {
 	local -i n=0
@@ -135,6 +137,7 @@ check4edl() {
 		echo "!!! No device with PID=9008 found !!!"
 		return 1
 	fi >/dev/tty
+	echo
 }
 
 dfu2edl() {
@@ -278,6 +281,8 @@ EOT
 }
 
 if check4edl; then echo "*** EDL ***"; else echo "--- NO EDL ---"; fi >/dev/tty
+echo
+echo Menu
 select menu in \
 	'DFU to EDL mode changer' \
 	'ADB to EDL mode changer' \
