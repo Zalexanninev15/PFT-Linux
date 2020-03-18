@@ -8,6 +8,12 @@
 ## Description
 Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita. The tool used ADB and emmcdl tools. 
 
+## System requirements
+* Linux distros for:
+- Installer: Ubuntu | Mint | Debian (maby)
+- PFT Linux: All (maby)
+* Additional: Internet (only for Installer)
+
 ## Instruction for use
 1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/download/1.3/installer.sh) script for the correct use and configuration of PFT. After reboot please open the folder "PFT-Linux"
 2. Run the script "pft.sh" (PFT himself)
