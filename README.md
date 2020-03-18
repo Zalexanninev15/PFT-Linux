@@ -10,8 +10,8 @@ Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita. The 
 
 ## System requirements
 * Linux distros for:
-- Installer: Ubuntu | Mint | Debian (maby)
-- PFT Linux: All (maby)
+_Installer:_  Ubuntu | Mint | Debian (maby)
+_PFT Linux:_  All (maby)
 * Additional: Internet (only for Installer)
 
 ## Instruction for use
