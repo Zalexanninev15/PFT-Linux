@@ -34,7 +34,7 @@ PORT_Search() {
 VER="1.2"
 
 clear
-echo "PFT Linux for v"$VER" by Zalexanninev15" 
+echo "PFT Linux v"$VER" by Zalexanninev15" 
 while [[ $menu != 10 ]]
 do
 echo
