@@ -13,8 +13,8 @@ Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for L
 * Additional: Internet (only for Installer)
 
 ## Instruction for use
-1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/download/1.4/installer.sh) script for the correct use and configuration of PFT. After reboot please open the folder "PFT-Linux"
-2. Run the script "pft.sh" (PFT himself)
+1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/download/1.5/install) script for the correct use and configuration of PFT. After reboot please open the folder "PFT-Linux"
+2. Run the script "pft.sh" (port by jno) or "npft" (port by Zalexaninnev15)
 
 ## All Errors of emmcdl ([source](https://github.com/Zalexanninev15/PFT2#all-errors-of-flasher-emmcdl))
 #### Status: 21 The device is not ready: 
