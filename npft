@@ -1,0 +1,133 @@
+#!/bin/bash
+
+PORT=/dev/ttyUSB0;
+
+Partitions() {
+	echo "All partitions:
+1) sbl1         14) cmnlib64       27) modemst1   40) mcfg        
+2) sbl1bak      15) cmnlib64bak    28) modemst2   41) apdp 
+3) rpm          16) keymaster      29) misc       42) msadp
+4) rpmbak       17) keymasterbak   30) batweak    43) dpo   
+5) tz           18) aboot          31) cache      44) logdump 
+6) tzbak        19) abootbak       32) sec        45) ztecfg 
+7) devcfg       20) boot           33) keystore   46) fsg
+8) devcfgbak    21) recovery       34) config     47) devinfo 
+9) dsp          22) modem          35) oem        48) splash 
+10) DDR         23) factory        36) mota       49) fingerid
+11) limits      24) ssd            37) dip        50) system 
+12) cmnlib      25) fsc            38) mdtp       51) vendor
+13) cmnlibbak   26) persist        39) syscfg     52) userdata"
+read -r -p '-- Press Enter to continue --'
+}
+
+
+PORT_Search() {
+	echo "Diagnostic port : "$PORT" : Seaching..."
+        while [ ! -c $PORT ]
+        do
+           sleep 1
+        done
+    echo "Diagnostic port : "$PORT" : Done!"
+    echo "Your port: "$PORT
+}
+
+VER="1.2"
+
+clear
+echo "PFT Linux for v"$VER" by Zalexanninev15" 
+while [[ $menu != 10 ]]
+do
+echo
+echo "************************************"
+echo "*        Choose a command:         *"
+echo "*                                  *"
+echo "*        1) DFU 👉️ EDL             *"
+echo "*        2) ADB 👉️ EDL             *"
+echo "*                                  *"
+echo "*       3) All partitions          *"
+echo "*      4) Backup partition (SOON)  *"
+echo "*      5) Flash partition (SOON)   *"
+echo "*   6) Backup all partitions (SOON)*"
+echo "*                                  *"
+echo "*     7) Stop ModemManager         *"
+echo "*(for more stable work in EDL mode)*"
+echo "* 8) Add user to \"dialout\" group   *"
+echo "*      9) Diagnostic port          *"
+echo "*                                  *"
+echo "*          10) Exit                *"
+echo "*                                  *"
+echo "*                                  *"
+echo "************************************"
+read menu
+echo
+
+if [[ $menu = 1 ]] 
+then
+  echo "DFU 👉️ EDL" 
+  emmcdl -p $PORT -raw 0xFE
+  echo "OK!"
+fi
+
+if [[ $menu = 2 ]]
+then
+	echo "ADB 👉️ EDL"
+	adb reboot edl
+	echo "OK!"
+fi
+
+if [[ $menu = 3 ]] 
+then
+   Partitions;
+fi
+
+if [[ $menu = 4 ]] # SOON!
+then
+   menu="0"
+fi
+
+if [[ $menu = 5 ]] # SOON!
+then
+   menu="0"
+fi
+
+if [[ $menu = 6 ]] # SOON!
+then
+   menu="0"
+fi
+
+if [[ $menu = 7 ]]
+then 
+   echo "Please, write your password for stop ModemManager:"
+   sudo systemctl stop ModemManager
+   echo "OK!"
+fi
+
+if [[ $menu = 8 ]]
+then
+	echo "Add user to \"dialout\" group"
+    sudo adduser ${LOGNAME:-$USER} dialout
+    echo "Re-login please"
+fi
+
+if [[ $menu = 9 ]]
+then
+   echo "You have a "$PORT" ? (Seach/No(I have other port))"
+   read SN
+   if [[ $SN = S || $SN = s ]]
+   then 
+       PORT_Search;
+  fi
+  if [[ $SN = N || $SN = n ]]
+  then 
+  	echo "Please, write your ttyUSB* - where * is the number (usually \"0\") that you need to enter:"
+  	read PORTN
+  	PORT="/dev/ttyUSB"$PORTN
+  	PORT_Search;
+  fi
+fi
+
+if [[ $menu = ver ]]
+then
+  echo "PFT Linux v"$VER" by Zalexanninev15" 
+fi
+done

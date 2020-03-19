@@ -176,24 +176,6 @@ EOT
 	fi >/dev/tty
 }
 
-fb2edl() {
-	fastboot devices
-	if fastboot oem edl; then
-		echo 'Done.'
-		check4edl 30
-	else
-		cat <<EOT
-*   !!!Failed to change FastBoot to EDL mode!!!   *
-*                                                 *
-*           Please check the following:           *
-*                                                 *
-*   1) FastBoot can see the device;               *
-*   2) USB cable is working.                      *
-*                                                 *
-EOT
-	fi >/dev/tty
-}
-
 backup_partition() {
 	local edlcom=$(get_port EDL Port) partn=$(get_partition)
 	mkdir -p backup
@@ -292,7 +274,6 @@ select menu in \
 		EXIT)	echo "Bye."; exit;;
 		DFU*)	dfu2edl;;
 		ADB*)	adb2edl;;
-		Fas*)	fb2edl;;
 		Backup*partition)backup_partition;;
 		Backup*partitions)backup_all_partitions;;
 		Flash*)	flash_partition;;
