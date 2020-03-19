@@ -1,5 +1,4 @@
 #!/bin/bash
-# PFT Linux by jno & Zalexanninev15
 
 base=$(dirname "$_") 
 cd "$base"
