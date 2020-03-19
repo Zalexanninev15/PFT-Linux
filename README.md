@@ -1,4 +1,7 @@
-# PFT-Linux
+# PFT Linux
+
+## Screenshot of PFT port by Zalexanninev15 (left) and jno (right)
+![](https://i.imgur.com/24iqgBg.jpg)
 
 ## Main authors of PFT
 * [friendki11er](https://4pda.ru/forum/index.php?showuser=198744) - author of the original PFT tool for Windows, file to get half-root rights ([post with PFT](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=85383238))
