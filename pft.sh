@@ -264,7 +264,6 @@ echo Menu
 select menu in \
 	'DFU to EDL mode changer' \
 	'ADB to EDL mode changer' \
-	'Fastboot to EDL mode changer' \
 	'Backup all partitions' \
 	'Backup any partition' \
 	'Flash any partition' \
