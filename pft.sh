@@ -36,7 +36,8 @@ cat >/dev/tty <<EOT
 * Partitions Flashing Tool for ZTE Blade V9 Vita  *
 *                                                 *
 *             Made by friendki11er                *
-*      Port on Linux by jno & Zalexanninev15      *
+*             Port on Linux by jno                *
+*         Minor edits by Zalexanninev15           *
 *                                                 *
 *=================================================*
 
