@@ -2,22 +2,18 @@
 
 ## Main authors of PFT
 * [friendki11er](https://4pda.ru/forum/index.php?showuser=198744) - author of the original PFT tool for Windows, file to get half-root rights ([post with PFT](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=85383238))
-* [jno](https://4pda.ru/forum/index.php?showuser=312616) - +- ported PFT on Linux (with some reservations) ([original port of PTF on Linux](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc))
-* [Zalexanninev15](https://4pda.ru/forum/index.php?showuser=5330563) - improved PTF port on Linux, exclusive installer, new PFT tool for Linux and PFT Linux Project
+* [jno](https://4pda.ru/forum/index.php?showuser=312616) - +- ported PFT for Linux (with some reservations) ([original port of PTF on Linux](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc))
+* [Zalexanninev15](https://4pda.ru/forum/index.php?showuser=5330563) - minor edits for PTF port for Linux, exclusive installer, new PFT tool for Linux and PFT Linux Project
 
 ## Description
-Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita. The tool used ADB and emmcdl tools. 
+Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. The tool used ADB and emmcdl tools. 
 
 ## System requirements
-* Linux distros for:
-
-_Installer:_  Ubuntu | Mint | Debian (maby)
-
-_PFT Linux:_  All (maby)
+* Linux distros for: Mint/Ubuntu/Debian, possibly others
 * Additional: Internet (only for Installer)
 
 ## Instruction for use
-1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/download/1.3/installer.sh) script for the correct use and configuration of PFT. After reboot please open the folder "PFT-Linux"
+1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/download/1.4/installer.sh) script for the correct use and configuration of PFT. After reboot please open the folder "PFT-Linux"
 2. Run the script "pft.sh" (PFT himself)
 
 ## All Errors of emmcdl ([source](https://github.com/Zalexanninev15/PFT2#all-errors-of-flasher-emmcdl))
