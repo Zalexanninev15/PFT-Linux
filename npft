@@ -31,12 +31,11 @@ PORT_Search() {
     echo "Your port: "$PORT
 }
 
-VER="1.2"
+VER="1.2.1"
 
-clear
-echo "PFT Linux v"$VER" by Zalexanninev15" 
 while [[ $menu != 10 ]]
 do
+echo "PFT Linux v"$VER" by Zalexanninev15"
 echo
 echo "************************************"
 echo "*        Choose a command:         *"
@@ -124,10 +123,5 @@ then
   	PORT="/dev/ttyUSB"$PORTN
   	PORT_Search;
   fi
-fi
-
-if [[ $menu = ver ]]
-then
-  echo "PFT Linux v"$VER" by Zalexanninev15" 
 fi
 done
