@@ -35,4 +35,4 @@ Maybe this is a crash in emmcdl. If the flash/dump is on, then you should not wo
 #### Status: 2 The system cannot find the file specified:
 An error may occur due to spaces in the path (folder) to something. You should also check for the availability of the file.
 #### Status: 6 The handle is invalid:
-Failure to work with COM port. You should again transfer the smartphone to EDL mode.
+Failure to work with diagnostic port. You should again transfer the smartphone to EDL mode.
