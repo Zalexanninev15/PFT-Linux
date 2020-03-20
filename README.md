@@ -1,4 +1,4 @@
-# PFT Linux
+# PFT Linux ([Post on 4PDA](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=94908974))
 
 ## Screenshot of PFT port by Zalexanninev15 (left) and jno (right)
 ![](https://i.imgur.com/7RKKdsU.png)
