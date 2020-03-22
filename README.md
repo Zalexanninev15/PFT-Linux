@@ -9,10 +9,10 @@
 * [Zalexanninev15](https://4pda.ru/forum/index.php?showuser=5330563) - minor edits for PTF port for Linux, exclusive installer, new PFT port for Linux and PFT Linux Project
 
 ## Description
-Tool for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. The tool used ADB and emmcdl tools. 
+Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. The tools used ADB and emmcdl tools.
 
 ## System requirements
-* Linux distros for: Mint/Ubuntu/Debian, possibly others
+* For Linux distros: Mint/Ubuntu/Debian, possibly others
 * Additional: Internet (only for Installer)
 
 ## Instruction for use
