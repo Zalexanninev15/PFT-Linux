@@ -1,4 +1,4 @@
-# PartNum PartName StartSec NumSecs
+# Partition Number | Partition Name | Start Section | Number Sections
 
 1 sbl1 16384 1024
 2 sbl1bak 17408 1024
@@ -52,4 +52,3 @@
 50 system 1967104 7045120
 51 vendor 9012224 1687552
 52 userdata 10715136 50356191
-
