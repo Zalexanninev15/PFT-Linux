@@ -2,7 +2,8 @@
 
 PORT=/dev/ttyUSB0;
 
-Partitions() {
+Partitions() 
+{
 	echo "All partitions:
 1) sbl1         14) cmnlib64       27) modemst1   40) mcfg        
 2) sbl1bak      15) cmnlib64bak    28) modemst2   41) apdp 
@@ -17,11 +18,10 @@ Partitions() {
 11) limits      24) ssd            37) dip        50) system 
 12) cmnlib      25) fsc            38) mdtp       51) vendor
 13) cmnlibbak   26) persist        39) syscfg     52) userdata"
-read -r -p '-- Press Enter to continue --'
 }
 
-
-PORT_Search() {
+PORT_Search() 
+{
 	echo "Diagnostic port : "$PORT" : Seaching..."
         while [ ! -c $PORT ]
         do
@@ -31,9 +31,9 @@ PORT_Search() {
     echo "Your port: "$PORT
 }
 
-VER="1.2.1"
+VER="1.4"
 
-while [[ $menu != 10 ]]
+while [[ $menu != 11 ]]
 do
 echo "PFT Linux v"$VER" by Zalexanninev15"
 echo
@@ -43,18 +43,19 @@ echo "*        Choose a command:         *"
 echo "*                                  *"
 echo "*        1) DFU 👉️ EDL             *"
 echo "*        2) ADB 👉️ EDL             *"
+echo "*     3) Search Diagnostic port    *"
 echo "*                                  *"
-echo "*       3) All partitions          *"
-echo "*      4) Backup partition (SOON)  *"
-echo "*      5) Flash partition (SOON)   *"
-echo "*   6) Backup all partitions (SOON)*"
+echo "*        4) All partitions         *"
+echo "*       5) Backup partition        *"
+echo "*        6) Flash partition        *"
+echo "*  7) Backup all partitions (SOON) *"
 echo "*                                  *"
-echo "*     7) Stop ModemManager         *"
+echo "*     8) Stop ModemManager         *"
 echo "*(for more stable work in EDL mode)*"
-echo "* 8) Add user to \"dialout\" group   *"
-echo "*      9) Diagnostic port          *"
+echo "* 9) Add user to \"dialout\" group   *"
 echo "*                                  *"
-echo "*          10) Exit                *"
+echo "*   10) Disable Google FRP (SOON)  *"
+echo "*          11) Exit                *"
 echo "*                                  *"
 echo "************************************"
 read menu
@@ -74,41 +75,7 @@ then
 	echo "OK!"
 fi
 
-if [[ $menu = 3 ]] 
-then
-   Partitions;
-fi
-
-if [[ $menu = 4 ]] # SOON!
-then
-   menu="0"
-fi
-
-if [[ $menu = 5 ]] # SOON!
-then
-   menu="0"
-fi
-
-if [[ $menu = 6 ]] # SOON!
-then
-   menu="0"
-fi
-
-if [[ $menu = 7 ]]
-then 
-   echo "Please, write your password for stop ModemManager:"
-   sudo systemctl stop ModemManager
-   echo "OK!"
-fi
-
-if [[ $menu = 8 ]]
-then
-	echo "Add user to \"dialout\" group"
-    sudo adduser ${LOGNAME:-$USER} dialout
-    echo "Re-login please"
-fi
-
-if [[ $menu = 9 ]]
+if [[ $menu = 3 ]]
 then
    echo "You have a "$PORT" ? (Seach/No(I have other port))"
    read SN
@@ -124,4 +91,53 @@ then
   	PORT_Search;
   fi
 fi
+
+if [[ $menu = 4 ]] 
+then
+   Partitions;
+fi
+
+if [[ $menu = 5 ]]
+then
+   echo "Write name of partition (also called file without extension) from item \"3\":"
+   read PAR
+   emmcdl -p $PORT -f tools/emmc.mbn -d $PAR -o tools/${PAR}_bak.bin
+   echo "Partition "$PAR" dumped in file: tools/"$PAR"_bak.bin"
+fi
+
+if [[ $menu = 6 ]] # SOON!
+then
+   echo "Write name of partition (also called file without extension) from item \"3\":"
+   read PAR
+   emmcdl -p $PORT -f tools/emmc.mbn -b $par tools/${PAR}.bin
+   echo "File tools/"$PAR"_bak.bin flashed in partition "$PAR
+fi
+
+if [[ $menu = 7 ]] # SOON!
+then
+   menu="0"
+fi
+
+if [[ $menu = 8 ]]
+then 
+   echo "Please, write your password for stop ModemManager:"
+   sudo systemctl stop ModemManager
+   echo "OK!"
+fi
+
+if [[ $menu = 9 ]]
+then
+	echo "Add user to \"dialout\" group"
+    sudo adduser ${LOGNAME:-$USER} dialout
+    echo "Re-login please"
+fi
+
+if [[ $menu = 10 ]] # SOON!
+then
+   menu="0"
+fi
+echo
+read -r -p '-- Press Enter to continue --'
+echo
+
 done
