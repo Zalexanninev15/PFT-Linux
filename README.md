@@ -19,12 +19,12 @@ Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita an
 1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/latest/download/install) script for the correct install "adb", "emmcdl" and PFT Linux
 2. Run the script "pft.sh" ("./pft.sh") (port by jno) or "npft" (port by Zalexaninnev15)
 #### Instructions for PFT Linux by Zalexanninev15. For PFT port by jno see [here](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc).
-1. Write "8", write your password and re-login in to your account
-2. Write "7" and write your password
+1. Write "9)", write your password and re-login in to your account
+2. Write "8)" and write your password
 3. Set your smartphone into EDL mode:
-* ADB: Write "2" and wait
-* DFU: point 4, write "1", point 4 (the port may change, so it may be necessary to change it (enter "H" when they ask about the port, then follow the instructions and the port will be checked))
-4. Check the appearance of the diagnostic port "/dev/ttyUSB0". Write "9" and "S"
+* ADB: Write "2)" and wait, then check the port in item "3)", enter "S"
+* DFU: Item 4. , write "1)", item 4. (the port may change, so it may be necessary to change it (enter "N" when they ask about the port, then follow the instructions and the port will be checked))
+4. Check the appearance of the diagnostic port "/dev/ttyUSB0". Write "3" and "S"
 5. Flash and Backup (but it has not yet been implemented, so use the [port by jno](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc))
 
 ## All Errors of emmcdl ([source](https://github.com/Zalexanninev15/PFT2#all-errors-of-flasher-emmcdl))
