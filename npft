@@ -31,7 +31,7 @@ PORT_Search()
     echo "Your port: "$PORT
 }
 
-VER="1.4"
+VER="1.6"
 
 while [[ $menu != 11 ]]
 do
@@ -46,15 +46,15 @@ echo "*        2) ADB 👉️ EDL             *"
 echo "*     3) Search Diagnostic port    *"
 echo "*                                  *"
 echo "*        4) All partitions         *"
-echo "*       5) Backup partition        *"
+echo "*       5) Dump partition          *"
 echo "*        6) Flash partition        *"
-echo "*  7) Backup all partitions (SOON) *"
+echo "*     7) Dump of all partitions    *"
 echo "*                                  *"
 echo "*     8) Stop ModemManager         *"
 echo "*(for more stable work in EDL mode)*"
 echo "* 9) Add user to \"dialout\" group   *"
 echo "*                                  *"
-echo "*   10) Disable Google FRP (SOON)  *"
+echo "*     10) Disable Google FRP       *"
 echo "*          11) Exit                *"
 echo "*                                  *"
 echo "************************************"
@@ -101,21 +101,88 @@ if [[ $menu = 5 ]]
 then
    echo "Write name of partition (also called file without extension) from item \"3\":"
    read PAR
-   emmcdl -p $PORT -f tools/emmc.mbn -d $PAR -o tools/${PAR}_bak.bin
-   echo "Partition "$PAR" dumped in file: tools/"$PAR"_bak.bin"
+   echo "===============Summary==============="
+   echo "Action = Dump partition"
+   echo "Partition = "$PAR
+   echo "File = files/"$PAR"_bak.bin" 
+   echo "Diagnostic port = "$PORT
+   echo "MBN file = tools/emmc.mbn"
+   read -r -p '-- Press Enter to continue --'
+   emmcdl -p $PORT -f tools/emmc.mbn -d $PAR -o files/${PAR}_bak.bin
 fi
 
-if [[ $menu = 6 ]] # SOON!
+if [[ $menu = 6 ]] 
 then
    echo "Write name of partition (also called file without extension) from item \"3\":"
    read PAR
-   emmcdl -p $PORT -f tools/emmc.mbn -b $par tools/${PAR}.bin
-   echo "File tools/"$PAR"_bak.bin flashed in partition "$PAR
+   echo "===============Summary==============="
+   echo "Action = Flash partition"
+   echo "Partition = "$PAR
+   echo "File = files/"$PAR".bin" 
+   echo "Diagnostic port = "$PORT
+   echo "MBN file = tools/emmc.mbn"
+   read -r -p '-- Press Enter to continue --'
+   emmcdl -p $PORT -f tools/emmc.mbn -b $par files/${PAR}.bin
 fi
 
-if [[ $menu = 7 ]] # SOON!
+if [[ $menu = 7 ]] 
 then
-   menu="0"
+   echo "===============Summary==============="
+   echo "Action = Dump of all partitions"
+   echo "Partition = "$PAR
+   echo "File = files/"$PAR".bin" 
+   echo "Diagnostic port = "$PORT
+   echo "MBN file = tools/emmc.mbn"
+   read -r -p '-- Press Enter to continue --'
+   emmcdl -p $PORT -f tools/emmc.mbn -d boot -o files/boot_bak.bin # 
+   emmcdl -p $PORT -f tools/emmc.mbn -d aboot -o files/aboot_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d modem -o files/modem_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d oem -o files/oem_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d abootbak -o files/abootbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d apdp -o files/apdp_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d batweak -o files/batweak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d cache -o files/cache_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d cmnlib -o files/cmnlib_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d cmnlib64 -o files/cmnlib64_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d cmnlibbak -o files/cmnlibbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d config -o files/config_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d DDR -o files/DDR_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d recovery -o files/recovery_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d vendor -o files/vendor_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d devcfg -o files/devcfg_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d devcfgbak -o files/devcfgbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d devinfo -o files/devinfo_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d factory -o files/factory_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d keymaster -o files/keymaster_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d dip -o files/dip_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d dpo -o files/dpo_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d dsp -o files/dsp_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d fingerid -o files/fingerid_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d fsc -o files/fsc_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d fsg -o files/fsg_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d keymasterbak -o files/keymasterbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d keystore -o files/keystore_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d limits -o files/limits_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d ztecfg -o files/ztecfg_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d tzbak -o files/tzbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d logdump -o files/logdump_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d mcfg -o files/mcfg_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d mdtp -o files/mdtp_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d misc -o files/misc_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d modemst1 -o files/modemst1_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d modemst2 -o files/modemst2_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d mota -o files/mota_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d msadp -o files/msadp_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d rpm -o files/rpm_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d rpmbak -o files/rpmbak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d persist -o files/persist_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d sbl1 -o files/sbl1_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d sbl1bak -o files/sbl1bak_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d splash -o files/splash_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d sec -o files/sec_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d ssd -o files/ssd_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d syscfg -o files/syscfg_bak.bin
+   emmcdl -p $PORT -f tools/emmc.mbn -d tz -o files/tz_bak.bin
 fi
 
 if [[ $menu = 8 ]]
@@ -132,9 +199,14 @@ then
     echo "Re-login please"
 fi
 
-if [[ $menu = 10 ]] # SOON!
+if [[ $menu = 10 ]] 
 then
-   menu="0"
+   echo "===============Summary==============="
+   echo "Action = Disable Google FRP"
+   echo "Diagnostic port = "$PORT
+   echo "MBN file = tools/emmc.mbn"
+   read -r -p '-- Press Enter to continue --'
+   emmcdl.exe -p $PORT -f tools/emmc.mbn -e config
 fi
 echo
 read -r -p '-- Press Enter to continue --'
