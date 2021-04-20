@@ -1,9 +1,11 @@
 # PFT Linux ([Post on 4PDA](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=94908974))
 
-[![](https://img.shields.io/badge/platform-Linux-orange.svg)](https://github.com/Zalexanninev15/PFT-Linux)
+[![](https://img.shields.io/badge/OS-Linux-orange?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
 [![](https://img.shields.io/github/downloads/Zalexanninev15/PFT-Linux/total.svg)](https://github.com/Zalexanninev15/PFT-Linux/releases)
 [![](https://img.shields.io/badge/license-GPLv3-green.svg)](LICENSE)
+[![](https://img.shields.io/badge/donate-QIWI-FF8C00.svg)](https://qiwi.com/n/ZALEXANNINEV15)
+[![](https://img.shields.io/badge/donate-YooMoney-8B3FFD.svg)](https://yoomoney.ru/to/410015106319420)
 
 ## Screenshot of PFT port by Zalexanninev15 (left) and jno (right)
 ![](https://i.imgur.com/7RKKdsU.png)
