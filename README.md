@@ -19,8 +19,8 @@
 Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. The tools used ADB and emmcdl tools.
 
 ## System requirements
-* For Linux distros: Mint/Ubuntu/Debian, Manjaro
-* Additional: Internet (only for Installer)
+* **Linux:** Mint/Ubuntu/Debian, Manjaro
+* **Additional:** Internet (only for installer)
 
 ## Instruction for use
 1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/latest/download/install) script for the correct install "adb", "emmcdl" and PFT Linux
