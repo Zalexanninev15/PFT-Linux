@@ -11,24 +11,28 @@
 [![](https://img.shields.io/badge/donate-YooMoney-8B3FFD.svg)](https://yoomoney.ru/to/410015106319420)
 
 ## Screenshot of PFT port by Zalexanninev15 (left) and jno (right)
+
 ![](https://i.imgur.com/7RKKdsU.png)
 
 ## Main authors of PFT
+
 * [friendki11er](https://4pda.ru/forum/index.php?showuser=198744) - author of the original PFT tool for Windows, file to get half-root rights ([post with PFT](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=85383238))
 * [jno](https://4pda.ru/forum/index.php?showuser=312616) - ported PFT for Linux ([original port of PTF on Linux](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc))
 * [Zalexanninev15](https://4pda.ru/forum/index.php?showuser=5330563) - minor edits for PTF port for Linux, exclusive installer, new PFT port for Linux and PFT Linux Project
 
 ## Description
+
 Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. Tools used ADB and emmcdl
 
 ## System requirements
+
 * **Linux:** Mint/Ubuntu/Debian, Manjaro
 * **Additional:** Internet (only for installer)
 
 ## Instruction for use
 1. Download and run [this](https://github.com/Zalexanninev15/PFT-Linux/releases/latest/download/install) script for the correct install "adb", "emmcdl" and PFT Linux
 2. Run the script "pft.sh" ("./pft.sh") (port by jno) or "npft" (port by Zalexaninnev15)
-#### Instructions for PFT Linux by Zalexanninev15. For PFT port by jno see [here](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc).
+#### Instructions for PFT Linux by Zalexanninev15. For PFT port by jno see [here](https://jno.undo.it/cgi-bin/fossil.cgi/PFT4pda/doc)
 1. Write "8", write your password and re-login in to your account
 2. Write "7" and write your password
 3. Set your smartphone into EDL mode:
