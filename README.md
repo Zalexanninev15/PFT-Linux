@@ -22,7 +22,7 @@
 
 ## Description
 
-Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. Tools used ADB and emmcdl
+Installer (for tools) & tools for flash & dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. Tools used ADB and [emmcdl](https://github.com/Zalexanninev15/emmcdl)
 
 ## System requirements
 
