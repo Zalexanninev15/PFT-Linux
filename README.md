@@ -1,9 +1,11 @@
 # PFT Linux ([Post on 4PDA](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=94908974))
 
-[![](https://img.shields.io/badge/OS-Linux-orange?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
+[![](https://img.shields.io/badge/OS-Linux-FF8C00?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
 [![](https://img.shields.io/github/downloads/Zalexanninev15/PFT-Linux/total.svg)](https://github.com/Zalexanninev15/PFT-Linux/releases)
 [![](https://img.shields.io/github/last-commit/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/commits/master)
+[![](https://img.shields.io/github/stars/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/stargazers)
+[![](https://img.shields.io/github/forks/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/network/members)
 [![](https://img.shields.io/badge/license-GPLv3-ligthgreen.svg)](LICENSE)
 [![](https://img.shields.io/badge/donate-QIWI-FF8C00.svg)](https://qiwi.com/n/ZALEXANNINEV15)
 [![](https://img.shields.io/badge/donate-YooMoney-8B3FFD.svg)](https://yoomoney.ru/to/410015106319420)
@@ -17,7 +19,7 @@
 * [Zalexanninev15](https://4pda.ru/forum/index.php?showuser=5330563) - minor edits for PTF port for Linux, exclusive installer, new PFT port for Linux and PFT Linux Project
 
 ## Description
-Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. The tools used ADB and emmcdl tools.
+Installer (for tools) & tools for flash/dump partitions for ZTE Blade V9 Vita and ZTE Blade A7 Vita for Linux. Tools used ADB and emmcdl
 
 ## System requirements
 * **Linux:** Mint/Ubuntu/Debian, Manjaro
