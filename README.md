@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/OS-Linux-ligthgreen?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
+[![](https://img.shields.io/badge/versions-changelog-7D28CC.svg)](https://github.com/Zalexanninev15/PFT-Linux/blob/master/Changelog.md)
 [![](https://img.shields.io/github/downloads/Zalexanninev15/PFT-Linux/total.svg)](https://github.com/Zalexanninev15/PFT-Linux/releases)
 [![](https://img.shields.io/github/last-commit/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/commits/master)
 [![](https://img.shields.io/github/stars/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/stargazers)
