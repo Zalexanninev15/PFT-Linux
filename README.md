@@ -1,4 +1,4 @@
-# PFT Linux ([Post on 4PDA](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=94908974)) | [Latest release](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
+# PFT Linux | [Latest release](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
 
 [![](https://img.shields.io/badge/OS-Linux-ligthgreen?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
@@ -8,6 +8,7 @@
 [![](https://img.shields.io/github/stars/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/stargazers)
 [![](https://img.shields.io/github/forks/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/network/members)
 [![](https://img.shields.io/badge/license-GPLv3-ligthgreen.svg)](LICENSE)
+[![](https://img.shields.io/badge/4PDA-PFT_Linux-blue)](https://4pda.ru/forum/index.php?s=&showtopic=952274&view=findpost&p=94908974)
 [![](https://img.shields.io/badge/donate-Buy_Me_a_Coffee-F94400.svg)](https://zalexanninev15.jimdofree.com/buy-me-a-coffee)
 
 ## Screenshot of PFT port by Zalexanninev15 (left) and jno (right)
