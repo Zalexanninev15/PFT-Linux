@@ -1,6 +1,7 @@
 # PFT Linux | [Latest release](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
 
 [![](https://img.shields.io/badge/OS-Linux-ligthgreen?logo=linux)](https://github.com/Zalexanninev15/PFT-Linux)
+[![](https://img.shields.io/badge/written_on-GNU_Bash-4EAA25.svg?logo=gnubash)](https://github.com/Zalexanninev15/PFT-Linux)
 [![](https://img.shields.io/github/v/release/Zalexanninev15/PFT-Linux)](https://github.com/Zalexanninev15/PFT-Linux/releases/latest)
 [![](https://img.shields.io/badge/versions-changelog-7D28CC.svg)](https://github.com/Zalexanninev15/PFT-Linux/blob/master/Changelog.md)
 [![](https://img.shields.io/github/downloads/Zalexanninev15/PFT-Linux/total.svg)](https://github.com/Zalexanninev15/PFT-Linux/releases)
