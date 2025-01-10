@@ -11,6 +11,7 @@
 [![](https://img.shields.io/github/issues/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/issues?q=is%3Aopen+is%3Aissue)
 [![](https://img.shields.io/github/issues-closed/Zalexanninev15/PFT-Linux.svg)](https://github.com/Zalexanninev15/PFT-Linux/issues?q=is%3Aissue+is%3Aclosed)
 [![](https://img.shields.io/badge/Пост_на_4PDA-0072BC?logo=android&logoColor=mediumspringgreen&borderRadius=30)](https://4pda.to/forum/index.php?showtopic=952274&view=findpost&p=94908974)
+[![](https://img.shields.io/badge/Telegram_канал-FFFFFF.svg?logo=telegram)](https://t.me/ZTEBV9VitaNews)
 [![](https://img.shields.io/badge/license-GPLv3-ligthgreen.svg)](LICENSE)
 [![](https://img.shields.io/badge/Donate-FFDD00.svg?logo=buymeacoffee&logoColor=black)](https://z15.neocities.org/donate)
 
